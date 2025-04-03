@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
             } else if (curFrag == 4) {
                 supportFragmentManager.beginTransaction()
                     .replace(binding.fragmentContainer.id, Fragment4())
-                    .addToBackStack("fragment_4")
+//                    .addToBackStack("fragment_4")
                     .commit()
             }
             /*val intent = Intent(this, Activity2::class.java)
