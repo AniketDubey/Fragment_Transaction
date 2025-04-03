@@ -34,13 +34,13 @@ class MainActivity : AppCompatActivity() {
                     .commit()
             } else if (curFrag == 3) {
                 supportFragmentManager.beginTransaction()
-                    .add(binding.fragmentContainer.id, Fragment3())
-                    .addToBackStack("fragment_3")
+                    .replace(binding.fragmentContainer.id, Fragment3())
+//                    .addToBackStack("fragment_3")
                     .commit()
             } else if (curFrag == 4) {
                 supportFragmentManager.beginTransaction()
                     .add(binding.fragmentContainer.id, Fragment4())
-//                    .addToBackStack("fragment_4")
+                    .addToBackStack("fragment_4")
                     .commit()
             }
             /*val intent = Intent(this, Activity2::class.java)
