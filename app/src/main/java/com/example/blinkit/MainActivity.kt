@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         supportFragmentManager.beginTransaction()
-            .add(binding.fragmentContainer.id, Fragment1())
+            .replace(binding.fragmentContainer.id, Fragment1())
             .addToBackStack("fragment_1") // idhar addtobackstack se yeh hoga ki black page se
             // fragment1 wali transaction ko store kiya gaya hai
             //to fragment1 ke hatne ke baad bhi ek black page rhega
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             curFrag++
             if (curFrag == 2) {
                 supportFragmentManager.beginTransaction()
-                    .add(binding.fragmentContainer.id, Fragment2())
+                    .replace(binding.fragmentContainer.id, Fragment2())
                     .addToBackStack("fragment_2")
                     .commit()
             } else if (curFrag == 3) {
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
                     .commit()
             } else if (curFrag == 4) {
                 supportFragmentManager.beginTransaction()
-                    .add(binding.fragmentContainer.id, Fragment4())
+                    .replace(binding.fragmentContainer.id, Fragment4())
                     .addToBackStack("fragment_4")
                     .commit()
             }
